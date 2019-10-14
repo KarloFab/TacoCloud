@@ -8,11 +8,11 @@ import tacos.domain.User;
 import tacos.repository.UserRepository;
 
 @Service
-public class UserDetailsService implements tacos.service.UserDetailsService {
+public class UserDetailsServiceImpl implements tacos.service.UserDetailsService {
     private UserRepository userRepository;
 
     @Autowired
-    public UserDetailsService(UserRepository userRepo) {
+    public UserDetailsServiceImpl(UserRepository userRepo) {
         this.userRepository = userRepo;
     }
     @Override
