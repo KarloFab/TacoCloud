@@ -23,12 +23,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/design", "/orders")
-                .hasRole("ROLE_USER")
+                .hasRole("USER")
                 .antMatchers("/", "/**").permitAll()
 
         .and()
                 .formLogin()
-                .loginPage("/login");
+                .loginPage("/login")
+                .defaultSuccessUrl("/design");
     }
 
     @Bean
