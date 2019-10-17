@@ -50,6 +50,9 @@ public class Order {
     @Digits(integer=3, fraction=0, message="Invalid CVV")
     private String ccCVV;
 
+    @ManyToOne
+    private User user;
+
     private Date placedAt;
 
     @ManyToMany(targetEntity=Taco.class)
